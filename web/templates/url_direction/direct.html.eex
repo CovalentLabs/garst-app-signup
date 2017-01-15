@@ -1,0 +1,6 @@
+<h2>Direction</h2>
+
+<pre class="code">
+Route: <%= @route %>
+Token: <%= @token %>
+</pre>
