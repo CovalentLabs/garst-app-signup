@@ -1,20 +1,32 @@
 {
+  "name": "garst_app_signup",
+  "private": true,
+  "version": "1.0.0",
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "brunch build --production",
-    "watch": "brunch watch --stdin"
+    "deploy": "NODE_ENV=production webpack",
+    "watch": "webpack --watch --stdin"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "phoenix": "file:deps/phoenix",
     "phoenix_html": "file:deps/phoenix_html"
   },
   "devDependencies": {
-    "babel-brunch": "~6.0.0",
-    "brunch": "2.7.4",
-    "clean-css-brunch": "~2.0.0",
-    "css-brunch": "~2.0.0",
-    "javascript-brunch": "~2.0.0",
-    "uglify-js-brunch": "~2.0.1"
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^6.0.60",
+    "@types/phoenix": "0.0.4",
+    "@types/webpack": "^2.2.0",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
+    "node-sass": "^4.3.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "ts-helpers": "^1.1.2",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.2.0-dev.20170115",
+    "webpack": "^2.2.0-rc.5"
   }
 }
