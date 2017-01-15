@@ -29,7 +29,7 @@ const config: WebpackConfig = {
 
     output: {
         path: root('priv/static'),
-        publicPath: '/static',
+        publicPath: '/',
         filename: 'js/[name].js'
     },
 
