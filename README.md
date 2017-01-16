@@ -11,6 +11,23 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## Environment Variables
+
+For **sending text messages**, we must specify the SMTP server credentials with
+
+`TWILIO_ACCOUNT_SID`
+
+`TWILIO_AUTH_TOKEN`
+
+
+For **sending email**, we must specify the SMTP server credentials with
+
+`GA_SMTP_DOMAIN`, Likely "smtp.mailgun.org" for mailgun.
+
+`GA_SMTP_USERNAME`
+
+`GA_SMTP_PASSWORD`
+
 ## References
 
 The developer of this repository refers to prior notes from https://github.com/ZombieHippie/phoenix-rumbl-tutorial

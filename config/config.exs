@@ -25,3 +25,18 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+# Twilio Test Messaging Setup
+config :ex_twilio, account_sid: System.get_env("TWILIO_ACCOUNT_SID")
+config :ex_twilio, auth_token:  System.get_env("TWILIO_AUTH_TOKEN")
+
+# SMTP Emailing Setup
+config :garst_app_signup, GarstAppSignup.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  server: System.get_env("GA_SMTP_DOMAIN"),
+  port: 465,
+  username: System.get_env("GA_SMTP_USERNAME"),
+  password: System.get_env("GA_SMTP_PASSWORD"),
+  tls: :never, # can be `:always` or `:never`
+  ssl: true, # can be `true`
+  retries: 1
