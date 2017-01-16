@@ -1,6 +1,7 @@
 <h2>Direction</h2>
 
 <pre class="code">
+Version: <%= @version %>
 Route: <%= @route %>
-Token: <%= @token %>
+Secret: <%= @secret %>
 </pre>
