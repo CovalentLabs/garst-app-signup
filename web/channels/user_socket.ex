@@ -1,8 +1,8 @@
-defmodule GarstAppSignup.UserSocket do
+defmodule GarstApp.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", GarstAppSignup.RoomChannel
+  # channel "room:*", GarstApp.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -30,7 +30,7 @@ defmodule GarstAppSignup.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     GarstAppSignup.Endpoint.broadcast("users_socket:#{user.id}", "disconnect", %{})
+  #     GarstApp.Endpoint.broadcast("users_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

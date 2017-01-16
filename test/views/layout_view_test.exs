@@ -1,3 +1,3 @@
-defmodule GarstAppSignup.LayoutViewTest do
-  use GarstAppSignup.ConnCase, async: true
+defmodule GarstApp.LayoutViewTest do
+  use GarstApp.ConnCase, async: true
 end

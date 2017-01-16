@@ -1,4 +1,4 @@
-defmodule GarstAppSignup.ErrorHelpers do
+defmodule GarstApp.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule GarstAppSignup.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(GarstAppSignup.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(GarstApp.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(GarstAppSignup.Gettext, "errors", msg, opts)
+      Gettext.dgettext(GarstApp.Gettext, "errors", msg, opts)
     end
   end
 end

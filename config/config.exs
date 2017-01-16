@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :garst_app_signup,
-  ecto_repos: [GarstAppSignup.Repo]
+config :garst_app,
+  ecto_repos: [GarstApp.Repo]
 
 # Configures the endpoint
-config :garst_app_signup, GarstAppSignup.Endpoint,
+config :garst_app, GarstApp.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "FtATMAMrl5/4T99D4Yz1FkCW0eyF7SXNuXYYBwMwTip7mNjGg1ozdjlVSxyLjclV",
-  render_errors: [view: GarstAppSignup.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: GarstAppSignup.PubSub,
+  render_errors: [view: GarstApp.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: GarstApp.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
@@ -32,7 +32,7 @@ config :ex_twilio, auth_token:  System.get_env("GA_TWILIO_AUTH_TOKEN")
 config :ex_twilio, send_number:  System.get_env("GA_TWILIO_SEND_NUMBER")
 
 # SMTP Emailing Setup
-config :garst_app_signup, GarstAppSignup.Mailer,
+config :garst_app, GarstApp.Mailer,
   adapter: Bamboo.MailgunAdapter,
   api_key: System.get_env("GA_MG_API_KEY"),
   domain: System.get_env("GA_MG_DOMAIN")

@@ -1,8 +1,8 @@
-defmodule GarstAppSignup.Mixfile do
+defmodule GarstApp.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :garst_app_signup,
+    [app: :garst_app,
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule GarstAppSignup.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {GarstAppSignup, []},
+    [mod: {GarstApp, []},
      applications: [:bamboo, :ex_twilio, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end

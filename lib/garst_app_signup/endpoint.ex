@@ -1,14 +1,14 @@
-defmodule GarstAppSignup.Endpoint do
-  use Phoenix.Endpoint, otp_app: :garst_app_signup
+defmodule GarstApp.Endpoint do
+  use Phoenix.Endpoint, otp_app: :garst_app
 
-  socket "/socket", GarstAppSignup.UserSocket
+  socket "/socket", GarstApp.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :garst_app_signup, gzip: false,
+    at: "/", from: :garst_app, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,8 +35,8 @@ defmodule GarstAppSignup.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_garst_app_signup_key",
+    key: "_garst_app_key",
     signing_salt: "8xJV5Vs5"
 
-  plug GarstAppSignup.Router
+  plug GarstApp.Router
 end

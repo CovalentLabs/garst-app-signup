@@ -1,5 +1,5 @@
-defmodule GarstAppSignup.ErrorView do
-  use GarstAppSignup.Web, :view
+defmodule GarstApp.ErrorView do
+  use GarstApp.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,5 +1,5 @@
-defmodule GarstAppSignup.Router do
-  use GarstAppSignup.Web, :router
+defmodule GarstApp.Router do
+  use GarstApp.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule GarstAppSignup.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", GarstAppSignup do
+  scope "/", GarstApp do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
@@ -22,7 +22,7 @@ defmodule GarstAppSignup.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", GarstAppSignup do
+  # scope "/api", GarstApp do
   #   pipe_through :api
   # end
 end

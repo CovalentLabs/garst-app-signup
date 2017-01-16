@@ -1,12 +1,12 @@
-defmodule GarstAppSignup.Web do
+defmodule GarstApp.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use GarstAppSignup.Web, :controller
-      use GarstAppSignup.Web, :view
+      use GarstApp.Web, :controller
+      use GarstApp.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule GarstAppSignup.Web do
     quote do
       use Phoenix.Controller
 
-      alias GarstAppSignup.Repo
+      alias GarstApp.Repo
       import Ecto
       import Ecto.Query
 
-      import GarstAppSignup.Router.Helpers
-      import GarstAppSignup.Gettext
+      import GarstApp.Router.Helpers
+      import GarstApp.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule GarstAppSignup.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import GarstAppSignup.Router.Helpers
-      import GarstAppSignup.ErrorHelpers
-      import GarstAppSignup.Gettext
+      import GarstApp.Router.Helpers
+      import GarstApp.ErrorHelpers
+      import GarstApp.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule GarstAppSignup.Web do
     quote do
       use Phoenix.Channel
 
-      alias GarstAppSignup.Repo
+      alias GarstApp.Repo
       import Ecto
       import Ecto.Query
-      import GarstAppSignup.Gettext
+      import GarstApp.Gettext
     end
   end
 

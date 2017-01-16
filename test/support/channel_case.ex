@@ -1,4 +1,4 @@
-defmodule GarstAppSignup.ChannelCase do
+defmodule GarstApp.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule GarstAppSignup.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias GarstAppSignup.Repo
+      alias GarstApp.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint GarstAppSignup.Endpoint
+      @endpoint GarstApp.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(GarstAppSignup.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(GarstApp.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(GarstAppSignup.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(GarstApp.Repo, {:shared, self()})
     end
 
     :ok

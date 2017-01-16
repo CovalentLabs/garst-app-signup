@@ -1,5 +1,5 @@
-defmodule GarstAppSignup.EmailView do
-  use Bamboo.Phoenix, view: GarstAppSignup.EmailView
+defmodule GarstApp.EmailView do
+  use Bamboo.Phoenix, view: GarstApp.EmailView
 
   def welcome_text_email(email_address) do
     new_email

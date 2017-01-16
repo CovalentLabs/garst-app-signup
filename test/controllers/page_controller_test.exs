@@ -1,5 +1,5 @@
-defmodule GarstAppSignup.PageControllerTest do
-  use GarstAppSignup.ConnCase
+defmodule GarstApp.PageControllerTest do
+  use GarstApp.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

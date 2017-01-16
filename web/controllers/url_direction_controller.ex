@@ -1,5 +1,5 @@
-defmodule GarstAppSignup.URLDirectionController do
-  use GarstAppSignup.Web, :controller
+defmodule GarstApp.URLDirectionController do
+  use GarstApp.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

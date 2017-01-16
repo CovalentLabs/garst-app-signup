@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(GarstAppSignup.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(GarstApp.Repo, :manual)
 
