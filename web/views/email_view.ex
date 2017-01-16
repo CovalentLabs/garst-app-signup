@@ -15,7 +15,7 @@ defmodule GarstAppSignup.EmailView do
   </div>
   <div style="text-align: center; padding-top: 22px;">
     <a style="text-decoration: none; display: inline-block; min-width: 250px; padding-top: 19px; padding-bottom: 23px; background: #4FC3F7; border-radius: 5px; font-weight: bold; text-align: center; font-size: 26px; color: #4A4A4A;"
-        href="https://garstapp.com/go/invitation/pojoihWAOUIPhgpowahop0wah">
+        href="https://garstapp.ngrok.io/go/invitation/pojoihWAOUIPhgpowahop0wah">
       Sign up!
     </a>
   </div>
