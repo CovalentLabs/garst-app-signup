@@ -27,8 +27,9 @@ config :logger, :console,
 import_config "#{Mix.env}.exs"
 
 # Twilio Test Messaging Setup
-config :ex_twilio, account_sid: System.get_env("TWILIO_ACCOUNT_SID")
-config :ex_twilio, auth_token:  System.get_env("TWILIO_AUTH_TOKEN")
+config :ex_twilio, account_sid: System.get_env("GA_TWILIO_ACCOUNT_SID")
+config :ex_twilio, auth_token:  System.get_env("GA_TWILIO_AUTH_TOKEN")
+config :ex_twilio, send_number:  System.get_env("GA_TWILIO_SEND_NUMBER")
 
 # SMTP Emailing Setup
 config :garst_app_signup, GarstAppSignup.Mailer,

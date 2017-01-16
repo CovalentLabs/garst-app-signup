@@ -18,7 +18,7 @@ defmodule GarstAppSignup.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {GarstAppSignup, []},
-     applications: [:bamboo, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:bamboo, :ex_twilio, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -39,7 +39,7 @@ defmodule GarstAppSignup.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:bamboo, "~> 0.7"},
-     {:bamboo_smtp, "~> 1.2.1"}]
+     {:ex_twilio, "~> 0.2.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
