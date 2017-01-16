@@ -4,7 +4,7 @@ defmodule GarstAppSignup.EmailView do
   def welcome_text_email(email_address) do
     new_email
     |> to(email_address)
-    |> from("hey@garstapp.com")
+    |> from("Garst App <hey@garstapp.com>")
     |> subject("Cole invited you to join the Garst App community!")
     |> html_body("""
 <div style="max-width: 420px; margin: 0 auto; padding: 0 35px 25px 35px; color: #4A4A4A;">

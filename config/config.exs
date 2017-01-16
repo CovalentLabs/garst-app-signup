@@ -32,11 +32,6 @@ config :ex_twilio, auth_token:  System.get_env("TWILIO_AUTH_TOKEN")
 
 # SMTP Emailing Setup
 config :garst_app_signup, GarstAppSignup.Mailer,
-  adapter: Bamboo.SMTPAdapter,
-  server: System.get_env("GA_SMTP_DOMAIN"),
-  port: 465,
-  username: System.get_env("GA_SMTP_USERNAME"),
-  password: System.get_env("GA_SMTP_PASSWORD"),
-  tls: :never, # can be `:always` or `:never`
-  ssl: true, # can be `true`
-  retries: 1
+  adapter: Bamboo.MailgunAdapter,
+  api_key: System.get_env("GA_MG_API_KEY"),
+  domain: System.get_env("GA_MG_DOMAIN")
