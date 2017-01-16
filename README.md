@@ -1,4 +1,4 @@
-# GarstAppSignup
+# GarstApp
 
 To start your Phoenix app:
 
@@ -13,20 +13,25 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Environment Variables
 
-For **sending text messages**, we must specify the SMTP server credentials with
+### `.env` file
 
-`TWILIO_ACCOUNT_SID`
+It is recommended to hold a `.env` file in your working directory to configure the server for
+development. An example `.env` file may contain the following lines of shell code to set up
+environment variables.
 
-`TWILIO_AUTH_TOKEN`
+```shell
+# Your Mailgun domain
+export GA_MG_DOMAIN=mg.garstapp.com
+# Your Mailgun API_KEY
+export GA_MG_API_KEY=key-614c91321fbb22bb329f3066e458161a
 
-
-For **sending email**, we must specify the SMTP server credentials with
-
-`GA_SMTP_DOMAIN`, Likely "smtp.mailgun.org" for mailgun.
-
-`GA_SMTP_USERNAME`
-
-`GA_SMTP_PASSWORD`
+# Your Twilio Account SID
+export GA_TWILIO_ACCOUNT_SID=BF55cc277dac99096c1239102cd4160006
+# Your Twilio auth token
+export GA_TWILIO_AUTH_TOKEN=2078090060440e929188c2b5a5b7fa76
+# The number in your Twilio acct you wish to send texts from
+export GA_TWILIO_SEND_NUMBER=+15556667777
+```
 
 ## References
 
