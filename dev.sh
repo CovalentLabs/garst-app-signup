@@ -1,2 +1,2 @@
-source ./secret.env.sh
+source .env
 iex -S mix phoenix.server

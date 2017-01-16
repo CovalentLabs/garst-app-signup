@@ -24,4 +24,4 @@ erl_crash.dump
 # variables.
 /config/prod.secret.exs
 
-secret.env.sh
+.env
