@@ -30,6 +30,7 @@ import_config "#{Mix.env}.exs"
 config :ex_twilio, account_sid: System.get_env("GA_TWILIO_ACCOUNT_SID")
 config :ex_twilio, auth_token:  System.get_env("GA_TWILIO_AUTH_TOKEN")
 config :ex_twilio, send_number:  System.get_env("GA_TWILIO_SEND_NUMBER")
+config :ex_twilio, basic_auth:  System.get_env("GA_TWILIO_HTTP_BASIC_AUTH")
 
 # SMTP Emailing Setup
 config :garst_app, GarstApp.Mailer,

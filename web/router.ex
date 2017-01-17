@@ -23,15 +23,14 @@ defmodule GarstApp.Router do
   scope "/go", GarstApp do
     pipe_through :browser # Use the default browser stack
 
-    get "/", URLDirectionController, :index
     get "/:version/:route", URLDirectionController, :direct
     get "/*path", URLDirectionController, :catch_all
   end
 
-  # Service hooks, such as Twilio SMS
+  # Service hooks, such as Twilio Sms
   scope "/hook", GarstApp do
     pipe_through :api
 
-
+    post "/sms", SmsHookController, :index
   end
 end

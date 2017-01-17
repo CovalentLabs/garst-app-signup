@@ -31,6 +31,13 @@ export GA_TWILIO_ACCOUNT_SID=BF55cc277dac99096c1239102cd4160006
 export GA_TWILIO_AUTH_TOKEN=2078090060440e929188c2b5a5b7fa76
 # The number in your Twilio acct you wish to send texts from
 export GA_TWILIO_SEND_NUMBER=+15556667777
+
+# This is the HTTP Basic Auth Header we can use to circumvent
+# the Twilio signing process. Leaving this empty "" will disable this.
+# So, in whatever dev environment we have, we may have POST Webhook to:
+# https://@garstapp.com/hook/sms
+export GA_TWILIO_HTTP_BASIC_AUTH=twilio:superhardpassword
+
 ```
 
 ## References
