@@ -5,6 +5,8 @@
 /*.ez
 /.awcache
 
+*.log
+
 # Generated on crash by the VM
 erl_crash.dump
 
