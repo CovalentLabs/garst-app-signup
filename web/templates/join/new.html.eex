@@ -1,0 +1,50 @@
+<style>
+@media (max-width: 380px) {
+.email-input + .input-group-addon {
+  max-width: 70vw;
+  transition: max-width .4s ease-out;
+  overflow: hidden;
+}
+input.email-input:focus + .input-group-addon {
+  max-width: 100px;
+}
+}
+.help-block {
+  padding: .5rem; color: #a94442;
+}
+</style>
+
+<div style="max-width: 400px" class="mt-1 mx-auto">
+  <p>
+  We strive to make Garst App as accessible as possible
+  to help you and others find their friends!
+  </p>
+  <%= form_for @changeset, join_path(@conn, :create), fn f -> %>
+    <div class="form-group">
+      <div class="input-group">
+        <%= text_input f, :nickname, placeholder: "Nickname",
+            class: "form-control pr-0",
+            "aria-describedby": "nicknameHelp" %>
+      </div>
+      <small id="nicknameHelp" class="form-text text-muted">We recommend first name, last initial.</small>
+      <%= error_tag f, :nickname %>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <%= text_input f, :email,
+            placeholder: "Email",
+            class: "form-control pr-0 email-input",
+            "aria-describedby": "msuEmailHelp" %>
+        <span class="input-group-addon" id="email-live-missouristate-edu-suffix">@live.missouristate.edu</span>
+      </div>
+      <small id="msuEmailHelp" class="form-text text-muted">This is our way of ensuring you are enrolled here.</small>
+      <%= error_tag f, :email %>
+    </div>
+    <div class="form-group">
+      <%= telephone_input f, :phone, placeholder: "Phone", class: "form-control" %>
+      <%= error_tag f, :phone %>
+    </div>
+
+  <%= submit "Apply", class: "btn btn-primary" %>
+  <% end %>
+</div>

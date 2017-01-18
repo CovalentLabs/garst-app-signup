@@ -17,6 +17,8 @@ defmodule GarstApp.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/join", JoinController, :new
+    post "/join", JoinController, :create
   end
 
   # All redirections
