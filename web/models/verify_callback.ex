@@ -15,8 +15,8 @@ defmodule GarstApp.VerifyCallback do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:token, :type, :value])
-    |> validate_required([:token, :type, :value])
+    |> cast(params, [:token, :type])
+    |> validate_required([:token, :type])
     |> unique_constraint(:token)
   end
 end

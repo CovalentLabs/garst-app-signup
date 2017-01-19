@@ -1,0 +1,7 @@
+<h2>Not found</h2>
+
+<h3><%= @message %></h3>
+
+<pre class="code">
+<%= @description %>
+</pre>

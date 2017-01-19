@@ -1,0 +1,13 @@
+Garst App
+------
+
+Hello <%= @account.nickname %>,
+
+Thank you for volunteering to help shape our vision to improve how students at <%= @campus %> meet new friends.
+
+If any information noted is inaccurate, then create a new application!
+
+Verify your email for (<%= @account.phone %>) by opening the following url:
+<%= @verify_url %>
+
+Unsubscribe here: <%= @verify_url %>#unsubscribe

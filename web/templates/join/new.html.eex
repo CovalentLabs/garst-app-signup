@@ -45,6 +45,12 @@ input.email-input:focus + .input-group-addon {
       <%= error_tag f, :phone %>
     </div>
 
-  <%= submit "Apply", class: "btn btn-primary" %>
+    <%= submit "Apply", class: "btn btn-primary" %>
+
+    <%# Pass our current hostname and protocol to pass into the email verification urls %>
+    <div class="form-group">
+      <input type="hidden" id="join_form_input_protocol_host" name="protocol_host" placeholder="https://garstapp.com" value="https://garstapp.com">
+      <script>window.join_form_input_protocol_host.value = window.location.protocol + '//' + window.location.hostname</script>
+    </div>
   <% end %>
 </div>

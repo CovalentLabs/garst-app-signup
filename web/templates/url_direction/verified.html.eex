@@ -1,0 +1,32 @@
+<h2><%= @title %></h2>
+
+<h3>Verification Status for <%= @account.nickname %></h3>
+
+<br>
+
+<style>.verified { color: darkgreen;} </style>
+<%= if @account.verified_email do %>
+<div class="verified">
+Email is verified!
+<% else %>
+<div class="unverified">
+Email is awaiting verification.
+<% end %>
+(<strong><%= @account.email %></strong>@<%= @account.email_domain %>)
+</div>
+
+<%= if @account.verified_phone do %>
+<div class="verified">
+Phone is verified
+<% else %>
+<div class="unverified">
+Phone is awaiting verification.
+<% end %>
+(<strong><%= @account.phone %></strong>)
+</div>
+
+<br>
+
+<%= if @account.verified_email && @account.verified_phone do %>
+You're verified! You're application will be reviewed, and we will be in touch as we gather a beta group.
+<% end %>

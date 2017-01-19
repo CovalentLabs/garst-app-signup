@@ -20,10 +20,14 @@ development. An example `.env` file may contain the following lines of shell cod
 environment variables.
 
 ```shell
-# Your Mailgun domain
-export GA_MG_DOMAIN=mg.garstapp.com
-# Your Mailgun API_KEY
-export GA_MG_API_KEY=key-614c91321fbb22bb329f3066e458161a
+# Your SMTP Username
+export GA_SMTP_USERNAME=AWFAWF15WIOPJ094U2P330
+# Your SMTP Password
+export GA_SMTP_PASSWORD=AgawZA1G3455235+HRGx7123xikxI/paM125s1O
+# Your SMTP Server name
+export GA_SMTP_SERVER_NAME=email-smtp.us-west-2.amazonaws.com
+# Your SMTP Port
+export GA_SMTP_SERVER_PORT=465
 
 # Your Twilio Account SID
 export GA_TWILIO_ACCOUNT_SID=BF55cc277dac99096c1239102cd4160006

@@ -1,0 +1,24 @@
+<div style="font-family: 'Arial', 'Helvetica', sans-serif; max-width: 420px; margin: 0 auto; padding: 0 35px 25px 35px; color: #4A4A4A;">
+  <div>
+    <span style='font-size: 48px; font-weight: bold;'>Garst App</span>
+    <br>
+    <p style='font-size: 26px; font-weight: bold;'>
+      <span>Hello <%= @account.nickname %>,</span>
+      <br>
+      <span>Thank you for volunteering to help shape our vision to improve how students at <%= @campus %> meet new friends.</span>
+    </p>
+    <br>
+    <span>If any information noted is inaccurate, then create a new application!</span>
+  </div>
+  <div style="text-align: center; padding-top: 22px;">
+    <a style="text-decoration: none; display: inline-block; min-width: 250px; padding-top: 19px; padding-bottom: 23px; background: #4FC3F7; border-radius: 5px; font-weight: bold; text-align: center; font-size: 26px; color: #4A4A4A;"
+        href="<%= @verify_url %>">
+      Verify
+    </a>
+  </div>
+</div>
+
+<br>
+<div style="text-align: right">
+  <a href="<%= @verify_url %>#unsubscribe">Unsubscribe</a>
+</div>

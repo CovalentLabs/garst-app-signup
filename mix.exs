@@ -18,7 +18,7 @@ defmodule GarstApp.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {GarstApp, []},
-     applications: [:bamboo, :ex_twilio, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:bamboo, :bamboo_smtp, :ex_twilio, :phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -39,6 +39,7 @@ defmodule GarstApp.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:bamboo, "~> 0.7"},
+     {:bamboo_smtp, "~> 1.3.0"},
      {:ex_twilio, "~> 0.2.1"}]
   end
 
