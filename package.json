@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "start": "npm run start:dev",
+    "start": "npm run start:dev --silent",
     "start:dev": "source .env && NODE_ENV=development iex -S mix phoenix.server",
     "deploy": "NODE_ENV=production webpack",
     "watch": "webpack --watch --stdin"
