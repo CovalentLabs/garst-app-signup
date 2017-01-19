@@ -42,7 +42,3 @@ config :garst_app, GarstApp.Mailer,
   tls: :if_available, # can be `:always` or `:never`
   ssl: true, # can be `true`
   retries: 1
-  # adapter: Bamboo.PostmarkAdapter,
-  # api_key: System.get_env("GA_PM_API_KEY")
-  # adapter: Bamboo.MailgunAdapter,
-  # domain: System.get_env("GA_MG_DOMAIN")
