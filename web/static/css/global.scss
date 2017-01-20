@@ -1,0 +1,56 @@
+
+@import 'color-map';
+@import 'bootstrap/colors';
+
+// Our custom specs from src/@app/style/bootstrap/_custom.scss
+@import 'bootstrap/custom';
+
+$enable-flex: true;
+// The Bootstrap node_module
+@import '~bootstrap/scss/bootstrap';
+
+// Helpers required for HammerJS bindings
+.touch-action-auto {
+  touch-action: auto !important;
+}
+.touch-action-pan-y {
+  touch-action: pan-y !important;
+}
+
+html {
+  background-color: $footer-color;
+}
+
+// Global method to insert content before
+[data-content-before]::before {
+  content: attr(data-content-before);
+}
+
+.layout__main {
+  max-width: 720px;
+  margin-bottom: 60px;
+
+  h1.title a {
+    color: $black;
+  }
+}
+
+.layout__footer {
+  background: $footer-color;
+
+  ul {
+    @media (max-width: map-get($grid-breakpoints, 'md')) {
+      // font-size: $font-size-sm;
+      a {
+        display: block;
+        padding: 12px;
+      }
+    }
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    color: $gray;
+  }
+}

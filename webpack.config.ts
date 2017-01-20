@@ -9,6 +9,7 @@ const path = require('path')
 
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // Environment
 const PROD = process.env.NODE_ENV === 'production'
@@ -17,10 +18,12 @@ console.log("Running in Production:", PROD ? "YES" : "NO")
 
 const extractSass = new ExtractTextPlugin({
     filename: "css/[name].css",
-    disable: !PROD
+    disable: false, // !PROD
 })
 
-console.log(root('web/static/css/main.scss'))
+const COPY_PATTERNS: { from: string, to?: string }[] = [
+    { from: root('web/static/assets') }
+] 
 
 const config: WebpackConfig = {
     entry: {
@@ -54,11 +57,12 @@ const config: WebpackConfig = {
                     fallbackLoaders: "style-loader"
                 })
             },
-            { test: /\.ts$/, loader: 'awesome-typescript-loader', exclude: root('web/static/css') },
+            { test: /\.ts$/, loader: 'awesome-typescript-loader' },
         ]
     },
     plugins: [
         extractSass,
+        new CopyWebpackPlugin(COPY_PATTERNS, {}),
         new CheckerPlugin()
     ]
 }

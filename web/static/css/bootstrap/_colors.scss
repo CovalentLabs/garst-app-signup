@@ -1,0 +1,50 @@
+
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+@import 'color-map';
+
+// background: color-map('blue', '50');
+
+
+// Start with assigning color names to specific hex values.
+$white:  white; // #fff !default;
+$black:  color-map('blue-grey', '1000'); // #0275d8 !default;#000 !default;
+$red:    color-map('amber'); // #0275d8 !default;#d9534f !default;
+$orange: color-map('deep-orange'); // #0275d8 !default;#f0ad4e !default;
+$yellow: color-map('yellow'); // #0275d8 !default;#ffd500 !default;
+$green:  color-map('lime'); // #0275d8 !default;#5cb85c !default;
+$blue:   color-map('blue'); // #0275d8 !default;
+$teal:   color-map('cyan'); // #5bc0de !default;
+$pink:   color-map('pink'); // #ff5b77 !default;
+$purple: color-map('purple'); // #613d7c !default;
+
+$md-red: #E34747;
+$md-body-color: #272727;
+$md-time: #B0BEC5;
+$input-indication-background: #FFEBEE;
+
+// Create grayscale
+$gray-dark:                 color-map('blue-grey', '900'); // #292b2c !default;
+$gray:                      color-map('blue-grey', '800'); // #464a4c !default;
+$gray-light:                color-map('blue-grey', '500'); // #636c72 !default;
+$gray-lighter:              color-map('blue-grey', '50'); // #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $blue !default;
+$brand-success:             $green !default;
+$brand-info:                $teal !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;
+
+$ui-primary:      $md-red;
+$ui-background:   $gray-lighter;
+$footer-color:    $black;

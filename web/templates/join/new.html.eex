@@ -1,7 +1,7 @@
 <style>
-@media (max-width: 380px) {
+@media (max-width: 500px) {
 .email-input + .input-group-addon {
-  max-width: 70vw;
+  max-width: 50vw;
   transition: max-width .4s ease-out;
   overflow: hidden;
 }
@@ -14,10 +14,9 @@ input.email-input:focus + .input-group-addon {
 }
 </style>
 
-<div style="max-width: 400px" class="mt-1 mx-auto">
+<div class="mt-1 mx-auto">
   <p>
-  We strive to make Garst App as accessible as possible
-  to help you and others find their friends!
+  Join the Beta test.
   </p>
   <%= form_for @changeset, join_path(@conn, :create), fn f -> %>
     <div class="form-group">
@@ -26,8 +25,8 @@ input.email-input:focus + .input-group-addon {
             class: "form-control pr-0",
             "aria-describedby": "nicknameHelp" %>
       </div>
-      <small id="nicknameHelp" class="form-text text-muted">We recommend first name, last initial.</small>
       <%= error_tag f, :nickname %>
+      <small id="nicknameHelp" class="form-text text-muted">We recommend first name, last initial.</small>
     </div>
     <div class="form-group">
       <div class="input-group">
@@ -37,15 +36,17 @@ input.email-input:focus + .input-group-addon {
             "aria-describedby": "msuEmailHelp" %>
         <span class="input-group-addon" id="email-live-missouristate-edu-suffix">@live.missouristate.edu</span>
       </div>
-      <small id="msuEmailHelp" class="form-text text-muted">This is our way of ensuring you are enrolled here.</small>
       <%= error_tag f, :email %>
+      <small id="msuEmailHelp" class="form-text text-muted">This is our way of ensuring you are enrolled here.</small>
     </div>
     <div class="form-group">
       <%= telephone_input f, :phone, placeholder: "Phone", class: "form-control" %>
       <%= error_tag f, :phone %>
     </div>
 
-    <%= submit "Apply", class: "btn btn-primary" %>
+    <div class="text-center">
+      <%= submit "Apply", class: "btn btn-primary" %>
+    </div>
 
     <%# Pass our current hostname and protocol to pass into the email verification urls %>
     <div class="form-group">

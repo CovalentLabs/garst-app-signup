@@ -2,14 +2,16 @@ defmodule GarstApp.Email do
   use Bamboo.Phoenix, view: GarstApp.EmailView
   
   alias GarstApp.Account
-  @verify_sender { "Garst App Verify", "verify@garstapp.com" }
+  # @verify_sender { "Garst App Verify", "verify@garstapp.com" }
   def verify_email(account = %Account{}, verify_url) do
+    verify_sender = { "Garst App Verifier", Application.get_env(:mailer, :send_verify_from) }
+
     campus = "Missouri State"
     phone = phone_fmt(account.phone)
     new_email()
     |> to(account)
-    |> from(@verify_sender)
-    |> put_header("List-Unsubscribe", "<mailto:verify@garstapp.com?subject=unsub>")
+    |> from(verify_sender)
+    |> put_header("List-Unsubscribe", "<mailto:support@garstapp.com?subject=Unsubscribe>")
     # |> put_header("Reply-To", "garstapp-support@covalent.social")
     |> subject("Welcome, " <> account.nickname <> " to the Garst App Beta!")
     |> render(:verify, account: account, verify_url: verify_url, campus: campus)

@@ -32,6 +32,9 @@ config :ex_twilio, auth_token:  System.get_env("GA_TWILIO_AUTH_TOKEN")
 config :ex_twilio, send_number:  System.get_env("GA_TWILIO_SEND_NUMBER")
 config :ex_twilio, basic_auth:  System.get_env("GA_TWILIO_HTTP_BASIC_AUTH")
 
+config :mailer, send_verify_from:  System.get_env("GA_SEND_VERIFY_FROM")
+config :mailer, send_notify_from:  System.get_env("GA_SEND_NOTIFY_FROM")
+
 # SMTP Emailing Setup
 config :garst_app, GarstApp.Mailer,
   adapter: Bamboo.SMTPAdapter,

@@ -1,4 +1,4 @@
 
-import '../css/app'
+require('../css/global.scss')
 
 import './app'

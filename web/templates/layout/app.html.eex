@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link name="app_icon" rel="shortcut icon" type="image/png" href="<%= static_path(@conn, "/images/icon192.png?23") %>">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Covalent of Springfield, Missouri">
 
     <title>Garst App 🍕</title>
     <link name="app_styles" rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
@@ -13,8 +14,8 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1 class="pt-4">Garst App</h1>
+    <div class="container-fluid layout__main">
+      <h1 class="pt-4 title"><a href="<%= page_path(@conn, :index) %>">Garst App</a></h1>
       <%= if get_flash(@conn, :info) do %>
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <% end %>
@@ -25,7 +26,16 @@
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-
+    </div>
+    <div class="container-fluid layout__footer">
+      <footer class="py-4 row justify-content-center">
+        <div class="col-md-6">
+          <ul>
+            <li><a href="<%= join_path(@conn, :new) %>">Beta Testing</a></li>
+            <li><a download href="<%= static_path(@conn, "/contact/GarstAppSupport.vcf") %>">Add Garst App to your Contacts</a></li>
+          </ul>
+        </div>
+      </footer>
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>

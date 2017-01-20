@@ -29,6 +29,11 @@ export GA_SMTP_SERVER_NAME=email-smtp.us-west-2.amazonaws.com
 # Your SMTP Port
 export GA_SMTP_SERVER_PORT=465
 
+# Sending Email addresses
+# May be no-reply addresses
+export GA_SEND_VERIFY_FROM=verify@notify.garstapp.com
+export GA_SEND_NOTIFY_FROM=notify@notify.garstapp.com
+
 # Your Twilio Account SID
 export GA_TWILIO_ACCOUNT_SID=BF55cc277dac99096c1239102cd4160006
 # Your Twilio auth token
