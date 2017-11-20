@@ -4,6 +4,10 @@ This project served as a landing page for the GarstApp launch, an app which Cova
 
 Behind GarstApp's design is a mixture of Lyft and meetup.com, for people to impulsively find others on campus to eat with. This idea was one among many different approaches Parrot and Covalent took towards helping students feel less lonely.
 
+## Accepting your invitation
+![Emailed invitation](https://user-images.githubusercontent.com/2925395/33000147-ecdf5eb2-cd6b-11e7-9a5c-527018eeda23.png)
+Check out this [email template's source file](https://github.com/CovalentLabs/garst_app_signup/blob/62aae47c3e8d66cfc0ade25e0381d99ce6437d13/web/templates/url_direction/verified.html.eex)!
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
